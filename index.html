@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notebook</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div id="list">
+		<div id="paper">
+			<table>
+				<h2>Записная книга</h2>
+				<hr>
+				<input id="nameList" type="text" placeholder="имя">
+				<input id="surnameList" type="text" placeholder="фамилия">
+				<input id="phoneList" type="text" placeholder="номер телефона">
+				<button id="addBtn">Записать</button>
+			</table>
+		</div>
+		<div id="book">
+			<h2>Телефонная книга</h2>
+			<table id="tableBook" border="1">
+				<thead>
+					<td>Имя</td>
+					<td>Фамилия</td>
+					<td>Номер телефона</td>
+					<td>Удалить<br>контакт</td>
+				</thead>
+				<tbody id="tbodyBook"></tbody>
+			</table>
+		</div>
+	</div>
+	<script type='text/appTemplate' id='app'>
+		<tr id="itemBook"><td>{{$nameList}}</td><td>{{$surnameList}}</td><td>{{$phoneList}}</td><td><button id='btnDeleteItem'>del</button></td></tr>
+	</script>
+</body>
+</html>
